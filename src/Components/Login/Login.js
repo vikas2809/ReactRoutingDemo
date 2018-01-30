@@ -1,28 +1,22 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Login extends Component
 {
     render(){
         return(
-            <div>
-                 <form>
-                   {/* <div>
-                        <img src="img_avatar2.png" alt="Avatar" className="avatar" />
-                    </div> */}
-                    <div className="container">
-                        <label><b>Username</b></label>
-                        <input type="text" placeholder="Enter Username" name="uname" required />
-
-                        <label><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="psw" required />
-                            
-                        <button type="submit">Login</button>
-                    </div>
-                    <div className="container" style={{color:"#f1f1f1"}}>
-                        <button type="button" className="cancelbtn">Cancel</button>
-                        {/* <span className="psw">Forgot <a href="#">password?</a></span> */}
-                    </div>
-                </form>
+            <div className="container">
+	            <div style={{marginTop: '10%',marginLeft: '25%',width: '50%'}} className="login">
+		            <h4>Login to Web App</h4>
+			        <hr />
+                        <form className="login-inner">
+                            <input style={{marginBottom: '2%',textAlign: 'center'}} type="email" className="form-control email" id="email-input" placeholder="Enter email" />
+                            <input style={{marginBottom: '2%',textAlign: 'center'}} type="password" className="form-control password" id="password-input" placeholder="Password" />
+                            <input style={{marginBottom: '3%'}} className="btn btn-block btn-lg btn-success submit" type="submit" value="Login" />
+                        </form>
+                        <Link to={'/signup'}><a href="#" style={{marginTop:'5%',width:'49%'}} className="btn btn-sm btn-primary register">Register</a></Link>
+                    <a style={{marginTop:'5%',marginLeft: '2%',width:'49%'}} className="btn btn-sm btn-default forgot"> Forgot your password?</a>
+	            </div>
             </div>
         );
     }
