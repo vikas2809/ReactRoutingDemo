@@ -3,6 +3,13 @@ import './Header.css';
 import { Link } from 'react-router-dom';
 class Header extends Component{
     render(){
+        var loginDiv;var logoutDiv;var signupDiv;
+        if(this.props.login===true)
+            loginDiv=<a className="nav-link" ><i className="fa fa-sign-in fa-2x"></i> Login</a>;
+        if(this.props.signup===true)
+            signupDiv= <a className="nav-link"><i className="fa fa-user-plus fa-2x"></i> SignUp</a>;
+        if(this.props.logout===true)
+            logoutDiv=<a className="nav-link"><i className="fa fa-sign-out fa-2x"></i> Logout</a>;
         return(     
         <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
                 <a className="navbar-brand" href="#">
@@ -11,18 +18,18 @@ class Header extends Component{
                 </a>
                 <ul className="navbar-nav ml-auto">
                     <li className="navbar-item">
-                        <Link to={'/login'}> 
-                            <a className="nav-link" ><i className="fa fa-sign-in fa-2x"></i> Login</a>
+                        <Link to={'/login'}>
+                            {loginDiv}
                         </Link>
                     </li>
                     <li className="navbar-item">
                         <Link to={'/signup'}>
-                            <a className="nav-link"><i className="fa fa-user-plus fa-2x"></i> SignUp</a>
+                           {signupDiv}
                         </Link>
                     </li>
                     <li className="navbar-item">
                         <Link to={'/logout'}>
-                            <a className="nav-link"><i className="fa fa-sign-out fa-2x"></i> Logout</a>
+                            {logoutDiv}
                         </Link>
                     </li>
                 </ul>

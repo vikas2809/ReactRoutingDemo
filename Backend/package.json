@@ -1,0 +1,34 @@
+{
+  "name": "app.js",
+  "version": "1.0.0",
+  "description": "react-native backend",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikas2809/react-navigation-app.git"
+  },
+  "keywords": [
+    "react-native-demo-app"
+  ],
+  "author": "Vikas Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vikas2809/react-navigation-app/issues"
+  },
+  "homepage": "https://github.com/vikas2809/react-navigation-app#readme",
+  "dependencies": {
+    "atob": "^2.0.3",
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.13.9",
+    "morgan": "^1.9.0",
+    "nodemailer": "^4.4.1",
+    "request": "^2.83.0"
+  }
+}

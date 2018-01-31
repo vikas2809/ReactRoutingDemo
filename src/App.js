@@ -6,7 +6,7 @@ class App extends Component {
    render() {
       return (
         <div>
-          <Header />
+          {/* <Header login={true} signup={true} logout={false} /> */}
           <Routing />
           </div>
       );
